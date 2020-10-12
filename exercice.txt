@@ -1,0 +1,405 @@
+##### MIN MAX ###
+
+Début minMax
+    Début déclaration variable locale
+    
+        var nbre : <- N 0
+        var max : <- N 0
+        var min : <- N 0
+        var posmax : <- N 0
+        var posmin : <- N 0
+        var poslastmax : <- N 0
+        var poslastmin : <- N 0
+        var occurationMax : <- N 0
+        var occurationMin : <- N 0
+        var i : <- N 0
+        
+    fin déclaration variable
+
+    afficher "entrer un nombre"
+    saisir nbre
+
+    Si nbre != 100
+        alors
+            Tant que nbre != 100
+                i <- i + 1
+
+                Si nbre >= max ou max = 0
+                    alors 
+                        Si nbre != max 
+                            alors 
+                                max <- nbre
+                                occurationMax <- 1
+                                posmax <- i
+                                poslastmax <- i
+                            Sinon
+                                poslastmax <- i 
+                                occurationMax <- occurationMax + 1
+
+                        Fin Si
+                    Sinon
+                        Si nbre <= min ou min = 0
+                            alors
+                                min <- nbre
+                                occurationMin <- 1
+                                posmin <- i
+                                poslastmin <- i
+                            Sinon
+                                occurationMin <- occurationMin + 1
+                                poslastmin <- i
+                        Fin Si
+                Fin Si
+
+                afficher "entrer un nombre"
+                saisir nbre
+
+            Fin Tant que 
+        Sinon
+            alors
+                afficher " Nbre max : " max        
+                afficher " Nbre min : " min        
+                afficher " Position premier nbre max : " posmax      
+                afficher " Position dernier nbre max : " poslastmax
+                afficher " Occuration nbre max : " occurationMax
+                afficher " Position premier nbre min : " posmin      
+                afficher " Position dernier nbre min : " poslastmin
+                afficher " Occuration nbre min : " occurationMin
+    Fin Si
+Fin  minMax
+
+Correction MinMax de luxe
+
+Debut Min-Max ( Deluxe )
+    Debut declaration Variables Locales
+        Var Pos : N <- 0    Var Saisie : N <- 0
+        Var Min : N <- 0    Var Posmax : N <- 0
+        Var Max : N <- 0    Var Posmin : N <- 0
+        Var Omax : N <- 0   Var Dermax : N <- 0
+        Var Omin : N <- 0   Var Dermin : N <- 0
+    Fin declaration Variables Locales
+   Afficher " Veuillez saisir un nombre, saisir 100 pour terminer "
+   Saisir : Saisie
+   Si Saisie = 100
+      alors
+         Afficher " pas de valeurs entrées"
+      sinon
+         pos = 1
+         Min = Saisie
+         Posmax = 1
+         Posmin = 1
+         Max = Saisie
+         Dermax = 1
+         Dermin = 1
+         Saisir : Saisie
+         Tant que saisie =/ 100
+            pos = pos+1
+            Si Min > Saisie
+               Alors
+                  Min = Saisie
+                  Dermin = Pos
+                  Omin = 1
+                  Posmin = Pos
+               Sinon
+                  si Min = Saisie
+                     Alors
+                        Omin = Omin + 1
+                        Dermin = Pos
+                  Fin si
+            Fin si
+            Si Max < Saisie
+               Alors
+                  Max = Saisie
+                  Dermax = Pos
+                  Omax = 1
+                  Posmax = Pos
+               Sinon
+                  si Max = Saisie
+                     Alors
+                        Omax = Omax + 1
+                        Dermax = Pos
+                     Fin si
+           Fin si
+       Fin tant que
+       Affichage "Bla bla bleh..."
+   Fin si
+Fin Min - Max
+
+
+
+
+### Calcul factoriel ###
+
+Début factorielle
+    Début déclaration variable locale
+    
+        var nbre : <- N 0
+        var factorielle : <- N 1
+        
+    fin déclaration variable
+
+    afficher "entrer un nombre"
+    saisir nbre
+
+    Tant que nbre >= 2
+
+        factorielle <-  factorielle * (nbre)
+        nbre <- nbre - 1
+                
+    fin Tant que
+
+    afficher " le nombre factorielle de ", nbre,  " vaut ", factorielle
+
+fin factorielle
+
+
+
+### Moyenne intervalle ###
+
+Début Moyenne
+    variable locales:
+        var nbre : N <-  0
+        var somme : N <-  0
+        var i : N <-  0
+        var a : N <-  1
+        var b : N <-  1
+        var c : N <-  30
+        var d : N <- 1
+    fin variable locales
+
+    POUR a ALLANT b A c PAR PAS DE d
+        afficher "Entrer un nombre : "
+        saisir nbre
+
+        Si nbre >= 10 et nbre <= 20 
+            alors
+                somme <- somme + nbre
+                i <- i + 1
+    a SUIVANT
+
+    Si i != 0
+        alors afficher "la moyenne vaut ", somme / i
+    Fin Si
+Fin Moyenne
+
+###  Somme suite de nombre ###
+Début addSuite
+    variable locales:
+        var nbre1 : <- N 0
+        var nbre2 : <- N 0
+        var somme : <- N 0
+
+    fin variable locales
+
+    afficher "entrer un nombre"
+    saisir nbre1
+    afficher "entrer un nombre"
+    saisir nbre2
+
+    POUR a ALLANT nbre1 A nbre2 PAR PAS DE 1
+
+    somme <- somme + a  
+    
+    a SUIVANT
+    
+    afficher "La somme de la suite des nombres vaut : " somme
+
+fin addSuite
+
+
+
+
+
+
+
+
+### Découverte d’une valeur ###
+
+# 1)
+
+Début decouverteValeur
+    déclaration variable locales:
+        var nbre : <- N 0
+        var random : <- N aléatoire(100)
+    Fin variable locales
+
+    afficher "Entrer un nombre entre 0 et 100"
+    saisir nbre
+
+    
+    TANT QUE nbre = random
+        Si nbre < random
+            alors afficher "Votre numéro est trop petit"
+        Sinon 
+            afficher " Votre numéro est trop grand "
+        Fin Si
+        
+        saisir nbre
+    FIn  TANT QUE
+
+    Si nbre = random
+        alors afficher " Vous avez trouvé le bon nombre "
+    Fin Si
+Fin decouverteValeur 
+
+# 2)
+
+Début decouverteValeur
+    déclaration variable locales:
+        var nbre : <- N 0
+        var random : <- N aléatoire(100)
+        var trial : <- 5
+    Fin variable locales
+
+    afficher "Entrer un nombre entre 0 et 100, vous avez ", trial, " essais. "
+    saisir nbre
+
+
+    TANT QUE trial > 0 & nbre != random
+        Si nbre < random
+            alors afficher "Votre numéro est trop petit"
+        Sinon 
+            afficher " Votre numéro est trop grand "
+        Fin Si
+        
+        trail <- trial - 1
+
+        afficher "il vous reste", trail, " essais"
+        saisir nbre
+
+    Fin  TANT QUE
+
+    afficher "il vous reste", trial, " essais"
+    saisir nbre
+
+    Si nbre = random
+        alors afficher " Vous avez gagné."
+    SINON
+       alors afficher "vous avez perdu."
+    Fin Si
+Fin decouverteValeur 
+    
+
+
+
+
+
+### Compteur digital ###
+# 1)
+
+DEBUT programme
+    DEBUT DECLARATION VARIABLE LOCALES
+        VAR i : <- N 0
+    FIN VARIABLE LOCALES
+
+TANT QUE i < 1000
+    SI i >= 100
+        alors afficher i
+
+    SINON 
+        SI (i >= 10 && i<100)
+            alors afficher "0", i
+
+        SINON
+            alors afficher "00", i
+
+        FIN SI
+    FIN SI
+
+    i : <- i + 1 
+
+FIN TANT QUE
+FIN programme
+
+
+# 2)
+
+DEBUT programme
+    DEBUT DECLARATION VARIABLES LOCALES
+        VAR i : <- N 0
+    FIN VARIABLES LOCALES
+
+    TANT QUE i < 10 
+        AFFICHER "00", i
+        i : <- i + 1 
+    FIN TANT QUE
+
+    TANT QUE i >= 10 & i < 100
+        AFFICHER "0", i
+        i : <- i + 1 
+    FIN TANT QUE
+
+   TANT QUE i >= 100
+        AFFICHER i 
+        i : <- i + 1 
+    FIN TANT QUE
+
+FIN programme
+
+# 3)
+
+DEBUT programme
+    DEBUT DECLARATION VARIABLES LOCALES
+        VAR i : <- N 0
+    FIN VARIABLES LOCALES
+
+    POUR i ALLANT DE 1 A 9 PAR PAS DE 1 
+        AFFICHER "00", i
+    i SUIVANT
+
+    POUR i ALLANT DE 10 A 99 PAR PAS DE 1 
+        AFFICHER "0", i
+    i SUIVANT
+
+    POUR i ALLANT DE 10 A 99 PAR PAS DE 1 
+        AFFICHER i 
+    i SUIVANT
+
+FIN programme
+
+
+# 4)
+
+DEBUT programme
+    DEBUT DECLARATION VARIABLES LOCALES
+        VAR unite : <- N 0
+        VAR dizaine : <- N 0
+        VAR centaine : <- N 0
+    FIN VARIABLES LOCALES
+
+TANT QUE centaine < 10
+
+    SI unite = 10
+        alors dizaine <- dizaine + 1
+        unite <- 0
+    FIN SI
+
+    SI dizaine = 10
+        alors centaine <- centaine + 1
+        dizaine <- 0
+    FIN SI
+
+    afficher centaine, dizaine, unite
+
+    unite <- unite + 1 
+
+FIN TANT QUE
+FIN programme 
+
+(
+
+    pour centaine allant de 0 à 9
+        pour dizaine allant de 0 à 9
+            pour unite allant de 0 à 9
+            afficher centaine dizaine unite
+            unite SUIVANT
+        dizaine SUIVANT
+    centaine SUIVANT
+
+)
+
+(
+
+    pour nombre allant de 0 à 999
+        afficher (nombre DIV 100), ((nombre MOD 100) div 10, numéro MOD 10)
+    nombre suivant
+)
