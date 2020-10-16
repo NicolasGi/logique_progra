@@ -25,6 +25,9 @@ début prog
                         pos <- i
                 Fin Si
             iteration <- iteration + 1
+
+        i <- i + longueur(texteSearch)
+
         Fin SI
         i <- i + 1
     FIN TANT QUE

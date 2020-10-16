@@ -6,7 +6,7 @@ début prog
         var caractere : <- T ''
         var pos : <- N 0
         var lastPos : <- N 0
-        var i : <- N 0
+        var i : <- N 1
     Fin variable locale 
 
     afficher "Entrer un texte et un caractère: "
@@ -21,11 +21,9 @@ début prog
             alors
                 si pos = 0
                     pos <- i
-                sinon
-                    si lastPos < i
-                        lastPos <- i
-                    Fin SI
                 FIn SI
+                
+                lastPos <- i
         FIN SI
 
     i <- i + 1
