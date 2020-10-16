@@ -26,6 +26,7 @@ début prog
                 Fin Si
             iteration <- iteration + 1
         Fin SI
+        i <- i + 1
     FIN TANT QUE
 
 
