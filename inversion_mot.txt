@@ -22,7 +22,7 @@ début prog
                 pos <- pos + 1
 
         SINON
-            texteCopie <- texteCopie (+) sousChaine(texte, i + 1, lastPos)
+            texteCopie <- texteCopie (+) sousChaine(texte, i + 1, lastPos) (+) espace
             lastPos <- lastPos - pos
             pos <- 1
 
