@@ -1,0 +1,38 @@
+### recherche caractère ###
+
+début prog
+    Declaration variable locale
+        var texte : <- T ''
+        var caractere : <- T ''
+        var pos : <- N 0
+        var lastPos : <- N 0
+        var i : <- N 0
+    Fin variable locale 
+
+    afficher "Entrer un texte et un caractère: "
+    saisir texte
+    saisir caractere
+
+    caract(texte, )
+
+    TANT QUE i <= longueur(texte)
+
+        SI (caractere = caract(texte, i))
+            alors
+                si pos = 0
+                    pos <- i
+                sinon
+                    si lastPos < i
+                        lastPos <- i
+                    Fin SI
+                FIn SI
+        FIN SI
+
+    i <- i + 1
+    FIN TANT QUE
+
+    Si pos = 0  & lastPos = 0
+        alors 
+            afficher "Votre texte ne contient pas le caractère: ", caractere
+    FIn Si 
+Fin prog 

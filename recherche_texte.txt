@@ -1,0 +1,39 @@
+### recherche texte ###
+
+début prog
+    Declaration variable locale
+        var texteSource : <- T ''
+        var texteSearch : <- T ''
+        var result : <- T ''
+        var pos : <- N 0
+        var iteration : <- N 0
+        var i : <- N 1
+    Fin variable locale 
+
+    afficher "Entrer un texte source"
+    saisir texteSource
+
+    afficher "Entrer un texte de recherche"
+    saisir texteSearch
+
+    TANT QUE i <= longueur(texteSource)
+        result <- sousChaine(texteSource, i, longueur(texteSearch))
+        SI result = texteSearch
+            alors
+                si pos = 0 
+                    alors
+                        pos <- i
+                Fin Si
+            iteration <- iteration + 1
+        Fin SI
+    FIN TANT QUE
+
+
+    SI pos != 0 
+        alors
+            afficher "Votre recherche a été aboutie, il y a eut ", iteration, " fois " 
+            afficher "Sa première position est ", pos
+    Sinon
+        afficher "VOtre recherche n'a pas été aboutie"
+    FIN SI
+Fin prog
