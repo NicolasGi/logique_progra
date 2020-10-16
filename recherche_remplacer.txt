@@ -19,6 +19,7 @@ début prog
 
     afficher "Entrer un texte de remplacement"
     saisir textRemplace
+    
     TANT QUE i <= longueur(texteSource)
         result <- sousChaine(texteSource, i, longueur(texteSearch))
         textCopie <- sousChaine(texteSource, longueur(textResult), i)
