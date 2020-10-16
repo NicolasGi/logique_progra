@@ -5,8 +5,6 @@ début prog
         var texteSource : <- T ''
         var texteSearch : <- T ''
         var textRemplace : <- T ''
-        var textCopie: <- T ''
-        var result : <- T ''
         var textResult : <- T ''
         var i : <- N 1
     Fin variable locale 
@@ -19,16 +17,18 @@ début prog
 
     afficher "Entrer un texte de remplacement"
     saisir textRemplace
-    
+
     TANT QUE i <= longueur(texteSource)
-        result <- sousChaine(texteSource, i, longueur(texteSearch))
-        textCopie <- sousChaine(texteSource, longueur(textResult), i)
+        result <- sousChaine(texteSource, i, longueur(texteSearch) + i )
 
         SI result = texteSearch
-            textResult <- textCopie (+) texteSearch
-            i <- i + longueur(texteSearch)
+            textResult <- textResult (+) textRemplace
+            i <- i + longueur(textRemplace)
+        sinon
+            textResult <- textResult (+) caract(i)
+            i <- i + 1
         Fin SI
-        i <- i + 1
+
     FIN TANT QUE
     afficher textCopie
 fin prog
