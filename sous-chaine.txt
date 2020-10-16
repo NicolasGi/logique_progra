@@ -1,0 +1,33 @@
+### sous-chaine ###
+
+début prog
+    Declaration variable locale
+        var texte : <- T ''
+        var textCopie: <- T ''
+        var result : <- T ''
+        var pos : <- N 0
+        var lastPos : <- N 0
+        var i : <- N 1
+
+    Fin variable locale 
+
+    afficher "Entrer un texte"
+    saisir texte
+
+    afficher "Entrer une position de départ"
+    saisir pos
+
+    afficher "Entrer une position de fin"
+    saisir lastPos
+
+    Si pos <= lastPos ET lastPos <= longueur(text)
+        alors   
+            POUR i ALLANT DE pos A lastPos
+                result <- result (+) caract(text, i)
+            i SUIVANT
+            afficher result
+        SINON
+        afficher "Pas possible"
+    FIN SI
+
+FIN  prog   
