@@ -1,0 +1,21 @@
+### plus grand ###
+
+début prog
+    Declaration variable locale
+        var texte1 : <- T ''
+        var texteInverser: <- T ''
+        var i : <- N 0
+    Fin variable locale 
+
+    afficher "Saisir un premier texte"
+    saisir texte1
+
+    i <- longueur(texte1)
+
+    POUR i ALLANT longueur(text1) PAR -1
+        texteInverser <- texteInverser (+) caract(text1, i)
+    i SUIVANT
+
+    afficher texteInverser
+
+FIN prog
