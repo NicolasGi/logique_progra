@@ -1,0 +1,33 @@
+### recherche remplacer ###
+
+début prog
+    Declaration variable locale
+        var texteSource : <- T ''
+        var texteSearch : <- T ''
+        var textRemplace : <- T ''
+        var textCopie: <- T ''
+        var result : <- T ''
+        var textResult : <- T ''
+        var i : <- N 1
+    Fin variable locale 
+
+    afficher "Entrer un texte source"
+    saisir texteSource
+
+    afficher "Entrer un texte de recherche"
+    saisir texteSearch
+
+    afficher "Entrer un texte de remplacement"
+    saisir textRemplace
+    TANT QUE i <= longueur(texteSource)
+        result <- sousChaine(texteSource, i, longueur(texteSearch))
+        textCopie <- sousChaine(texteSource, longueur(textResult), i)
+
+        SI result = texteSearch
+            textResult <- textCopie (+) texteSearch
+            i <- i + longueur(texteSearch)
+        Fin SI
+        i <- i + 1
+    FIN TANT QUE
+    afficher textCopie
+fin prog
