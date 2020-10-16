@@ -20,9 +20,9 @@ début prog
     afficher "Entrer une position de fin"
     saisir lastPos
 
-    Si pos <= lastPos ET lastPos <= longueur(text)
+    Si pos <= lastPos ET lastPos <= longueur(text) + 1
         alors   
-            POUR i ALLANT DE pos A lastPos
+            POUR i ALLANT DE pos A lastPos - 1
                 result <- result (+) caract(text, i)
             i SUIVANT
             afficher result
