@@ -1,0 +1,38 @@
+### plus grand ###
+
+début prog
+    Declaration variable locale
+        var texte1 : <- T ''
+        var texte2: <- T ''
+        var i : <- N 0
+        var valeur : <- T 'VRAI'
+    Fin variable locale 
+
+    afficher "Saisir un premier texte"
+    saisir texte1
+
+    afficher "Saisir le deuxième texte"
+    saisir texte2
+
+    SI longueur(texte1) = longueur(texte2)
+        alors 
+            POUR i ALLANT DE 1 A longueur(texte1)
+                SI caract(texte1, i) > caract(texte2, i)
+                    alors
+                        valeur <- "VRAI"
+                        i <- longueur(texte1) - 1
+                FIN SI   
+            i SUIVANT
+        Sinon
+            SI longueur(texte1) > longueur(texte2)
+                alors
+                    valeur <- "VRAI"
+                Sinon
+                    valeur <- "FAUX"
+            FIN SI
+    FIN SI
+
+    afficher valeur
+
+   
+fin prog

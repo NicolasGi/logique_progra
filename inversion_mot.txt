@@ -1,0 +1,31 @@
+### inversion mot ###
+
+début prog
+    Declaration variable locale
+        var texte : <- T ''
+        var texteCopie: <- T ''
+        var result : <- T ''
+        var espace : <- T ' '
+        var pos : <- N 1
+        var lastPos : <- N 0
+        var i : <- N 0
+
+    Fin variable locale 
+
+    afficher "Entrer un texte"
+    saisir texte
+    lastPos <- longueur(texte) + 1
+
+    POUR i ALLANT DE longueur(texte) PAR -1
+        SI caract(texte, i) != espace
+            alors
+                pos <- pos + 1
+
+        SINON
+            texteCopie <- texteCopie (+) sousChaine(texte, i + 1, lastPos)
+            lastPos <- lastPos - pos
+            pos <- 1
+
+    i SUIVANT
+
+Fin prog
