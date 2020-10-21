@@ -10,7 +10,7 @@ Début x2
     cote[1] <- 1
 
     afficher "Entrer les", taille, " cotes"
-    POUR i ALLANT DE 2 A cote PAS DE 1
+    POUR i ALLANT DE 2 A cote PAR PAS DE 1
         saisir cote[i]
         cote[i] <- cote[i] * cote[i - 1]
     i SUIVANT
