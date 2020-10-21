@@ -1,0 +1,37 @@
+### min max ###
+
+Début minMax
+    Début déclaration variable locale
+        var taille: <- N 20
+        var cote : N [taille]
+        var i : <- N 0
+
+        var max : <- N 0
+        var min : <- N 0
+        var posmax : <- N 0
+        var posmin : <- N 0
+
+    fin déclaration variable
+
+    afficher "Entrer les 20 cotes"
+    POUR i ALLANT DE 1 A taille
+        saisir cote[i]
+
+        SI cote[i] > max 
+            alors 
+                max <- cote[i]
+                posmax <- i
+        FIN SI
+
+        SI cote[i] < min ou min = 0
+            alors
+                min <- cote[i]
+                posmin <- i
+        FIN SI
+
+    i SUIVANT
+
+    afficher " le plus grand nombre est ", max, " à la position", posmax
+    afficher " le plus petit nombre est ", min, " à la position", posmin
+    
+Fin minMax
