@@ -1,0 +1,32 @@
+### Copie plus ou moins ###
+
+Début copiePlusMoins
+    Début déclaration variable locale
+        var taille: <- N 10
+        var cote : N [taille]
+        var cote1: N[vrai, faux, faux, vrai, vrai, faux, faux, vrai, faux, vrai]
+        var cote3: N[taille]
+        var espace: " "
+        var nbreEspace : <- N 0
+        var i : <- N 0
+    fin déclaration variable
+
+    afficher "Entrer un nombre positif ou négatif"
+
+    POUR i ALLANT DE 1 A taille PAR PAS DE 1
+        saisir cote[i]
+
+    i SUIVANT
+    
+    POUR i ALLANT DE 1 A taille PAR PAS de 1
+
+        SI cote1[i] == faux
+            alors
+            cote3[i] <- cote1[i] * -1
+        SINON
+            cote3[i] <- cote1[i]
+        FINSI
+    i SUIVANT
+
+
+FIN copiePlusMoins
