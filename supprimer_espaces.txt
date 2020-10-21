@@ -11,6 +11,8 @@ Début deleteSpace
     fin déclaration variable
 
     POUR i ALLANT DE 1 A taille PAR PAS de 1
+        saisir cote[i]
+
         SI cote[i] == espace
             alors
             nbreEspace <- nbreEspace + 1
