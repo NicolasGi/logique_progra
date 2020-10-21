@@ -1,0 +1,17 @@
+### inversion vecteur  ###
+
+Début inversion
+    Début déclaration variable locale
+        var taille: <- N 10
+        var cote : N [taille]
+        var coteCopie: N[taille]
+        var i : <- N 0
+    fin déclaration variable
+
+    POUR i ALLANT DE taille A 1 PAR PAS de -1
+        coteCopie[(taille - i) + 1] <- cote[i]
+
+    i SUIVANT
+
+
+FIN inversion
