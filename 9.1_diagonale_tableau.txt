@@ -18,7 +18,7 @@ Début diagonale
                     cote1[i, j] <- 1
             FIN SI
 
-            SI j == colonne
+            SI j == colonne + 1 - i
                 alors
                     cote1[i, j] <- 2
             FIN SI
