@@ -1,0 +1,29 @@
+### Diagonale tableau ###
+
+Début diagonale
+    Début déclaration variable locale
+        var ligne: <- N 4
+        var colonne: <- N 4
+        var cote1 : N [ligne, colonne]
+
+        var i : <- N 0
+    fin déclaration variable
+
+
+
+      POUR i ALLANT DE 1 A colonne PAR PAS DE 1
+        POUR j ALLANT DE 1 A ligne PAR PAS DE 1
+            SI i == j
+                alors
+                    cote1[i, j] <- 1
+            FIN SI
+
+            SI j == colonne
+                alors
+                    cote1[i, j] <- 2
+            FIN SI
+
+        j SUIVANT
+      i SUIVANT  
+
+FIN diagonale
