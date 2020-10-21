@@ -1,0 +1,23 @@
+### Supprimer espace  ###
+
+Début deleteSpace
+    Début déclaration variable locale
+        var taille: <- N 10
+        var cote : N [taille]
+        var coteCopie: N[taille]
+        var espace: " "
+        var nbreEspace : <- N 0
+        var i : <- N 0
+    fin déclaration variable
+
+    POUR i ALLANT DE 1 A taille PAR PAS de 1
+        SI cote[i] == espace
+            alors
+            nbreEspace <- nbreEspace + 1
+                i SUIVANT
+        SINON
+            coteCopie[i - nbreEspace] <- cote[i]
+    i SUIVANT
+
+
+FIN deleteSpace
