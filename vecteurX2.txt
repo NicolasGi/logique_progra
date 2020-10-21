@@ -1,0 +1,18 @@
+### vecteur x2 ###
+
+Début x2
+    Début déclaration variable locale
+        var taille: <- N 16
+        var cote : N [taille]
+        var i : <- N 0
+    fin déclaration variable
+    
+    cote[1] <- 1
+
+    afficher "Entrer les", taille, " cotes"
+    POUR i ALLANT DE 2 A cote PAS DE 1
+        saisir cote[i]
+        cote[i] <- cote[i] * cote[i - 1]
+    i SUIVANT
+
+fin x2
