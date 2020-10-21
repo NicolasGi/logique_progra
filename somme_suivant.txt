@@ -9,7 +9,7 @@ Début somme
     fin déclaration variable
 
     POUR i ALLANT DE 1 A taille PAR PAS de 1
-        POUR j ALLANT DE taille i A taille PAR PAS de 1
+        POUR j ALLANT DE taille - i A taille PAR PAS de 1
             cote[i] <- cote[i] + cote[j]
         j SUIVANT
     i SUIVANT
