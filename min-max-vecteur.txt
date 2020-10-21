@@ -14,7 +14,7 @@ Début minMax
     fin déclaration variable
 
     afficher "Entrer les 20 cotes"
-    POUR i ALLANT DE 1 A taille
+    POUR i ALLANT DE 1 A taille PAS DE 1
         saisir cote[i]
 
         SI cote[i] > max 
@@ -33,5 +33,5 @@ Début minMax
 
     afficher " le plus grand nombre est ", max, " à la position", posmax
     afficher " le plus petit nombre est ", min, " à la position", posmin
-    
+
 Fin minMax
