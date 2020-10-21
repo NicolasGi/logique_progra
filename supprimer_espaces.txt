@@ -10,6 +10,7 @@ Début deleteSpace
         var i : <- N 0
     fin déclaration variable
 
+    afficher "Entrer votre phrase lettre par lettre "
     POUR i ALLANT DE 1 A taille PAR PAS de 1
         saisir cote[i]
 
