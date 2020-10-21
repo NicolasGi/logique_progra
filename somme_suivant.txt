@@ -8,8 +8,8 @@ Début somme
         var j : <- N 0
     fin déclaration variable
 
-    POUR i ALLANT DE taille A 1 PAR PAS de -1
-        POUR j ALLANT DE taille - i A 1 PAR PAS de -1
+    POUR i ALLANT DE 1 A taille PAR PAS de 1
+        POUR j ALLANT DE taille i A taille PAR PAS de 1
             cote[i] <- cote[i] + cote[j]
         j SUIVANT
     i SUIVANT
