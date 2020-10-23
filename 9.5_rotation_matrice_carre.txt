@@ -14,7 +14,8 @@ Début rotation
 
      POUR i ALLANT DE 1 A colonne PAR PAS DE 1
         POUR j ALLANT DE 1 A ligne PAR PAS DE 1
-            coteCopie[j, (colonne + 1) - i] <- cote1[i, j]
+            coteCopie[(colonne + 1) - i, j] <- cote1[i, j]
+        
         j SUIVANT
       i SUIVANT 
 
