@@ -1,0 +1,40 @@
+### Diagonale tableau ###
+
+Début diagonale
+    Début déclaration variable locale
+        var ligne: <- N 4
+        var colonne: <- N 4
+        var cote1 : N [ligne, colonne]
+        var i : <- N 0
+        var j : <- N 0
+        var sommeLigne : <- N 0
+        var sommeColonne : <- N 0
+        var sommeDiagonaleLeft : <- N 0
+        var sommeDiagonaleRight : <- N 0
+
+    fin déclaration variable
+
+     POUR i ALLANT DE 1 A colonne PAR PAS DE 1
+        POUR j ALLANT DE 1 A ligne PAR PAS DE 1
+
+        sommeLigne <- sommeLigne + cote1[i,j]
+
+        SI i == j
+            alors
+                sommeDiagonaleLeft <- sommeDiagonaleLeft + cote1[i, j] 
+        FIN SI
+
+        SI j == colonne + 1 - i
+            alors
+                sommeDiagonaleRight <- sommeDiagonaleRight + cote1[i, j] 
+        FIN SI
+
+        j SUIVANT
+
+        sommeColonne <- sommeColonne + cote1[i,j]
+      i SUIVANT 
+
+      Si sommeColonne == sommeDiagonaleLeft == sommeLigne == sommeDiagonaleRight
+        alors 
+            afficher "C'est un carré magique"
+      Fin SI
