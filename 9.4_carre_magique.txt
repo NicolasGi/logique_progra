@@ -1,6 +1,6 @@
-### Diagonale tableau ###
+### Carre magique ###
 
-Début diagonale
+Début magique
     Début déclaration variable locale
         var ligne: <- N 4
         var colonne: <- N 4
@@ -38,3 +38,5 @@ Début diagonale
         alors 
             afficher "C'est un carré magique"
       Fin SI
+
+fin magique
