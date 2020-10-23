@@ -26,4 +26,5 @@ Début diagonale
         j SUIVANT
       i SUIVANT  
 
+
 FIN diagonale
